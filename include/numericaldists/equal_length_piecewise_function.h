@@ -1,12 +1,12 @@
-#ifndef _BIDDING_EQUAL_LENGTH_PIECEWISE_FUNCTION_
-#define _BIDDING_EQUAL_LENGTH_PIECEWISE_FUNCTION_
+#ifndef _NUMERICALDISTS_EQUAL_LENGTH_PIECEWISE_FUNCTION_
+#define _NUMERICALDISTS_EQUAL_LENGTH_PIECEWISE_FUNCTION_
 
 #include <ostream>
 #include <vector>
 
-#include "bidding/piecewise_linear_function.h"
+#include "numericaldists/piecewise_linear_function.h"
 
-namespace bidding {
+namespace numericaldists {
 
 class EqualLengthPiecewiseFunction : public PiecewiseLinearFunction {
  public:
@@ -35,6 +35,6 @@ class EqualLengthPiecewiseFunction : public PiecewiseLinearFunction {
   float min_;
 };
 
-}  // namespace bidding
+}  // namespace numericaldists
 
-#endif  // _BIDDING_EQUAL_LENGTH_PIECEWISE_FUNCTION_
+#endif  // _NUMERICALDISTS_EQUAL_LENGTH_PIECEWISE_FUNCTION_

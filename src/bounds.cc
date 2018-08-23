@@ -1,11 +1,11 @@
-#include "bidding/bounds.h"
+#include "numericaldists/bounds.h"
 
 #include <cstddef>
 #include <ostream>
 
 #include <boost/container_hash/hash.hpp>
 
-namespace bidding {
+namespace numericaldists {
 
 bool operator==(const Bounds& g1, const Bounds& g2) {
   return g1.a == g2.a && g1.b == g2.b;
@@ -24,4 +24,4 @@ std::ostream& operator<<(std::ostream& os, const Bounds& r) {
   return os;
 }
 
-}  // namespace bidding
+}  // namespace numericaldists

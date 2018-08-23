@@ -2,9 +2,11 @@
 
 #include <vector>
 
-#include "bidding/combination_generation.h"
+#include "numericaldists/combination_generation.h"
 
 namespace gatests {
+
+using namespace numericaldists;
 
 class CombinationGenerationTest : public ::testing::Test {
  public:
@@ -15,17 +17,17 @@ class CombinationGenerationTest : public ::testing::Test {
 };
 
 TEST_F(CombinationGenerationTest, GenerateFirstsTest) {
-  EXPECT_EQ(0, bidding::GetFirstCanonicalCombination(0));
-  EXPECT_EQ(7, bidding::GetFirstCanonicalCombination(3));
-  EXPECT_EQ(31, bidding::GetFirstCanonicalCombination(5));
+  EXPECT_EQ(0, GetFirstCanonicalCombination(0));
+  EXPECT_EQ(7, GetFirstCanonicalCombination(3));
+  EXPECT_EQ(31, GetFirstCanonicalCombination(5));
 }
 
 TEST_F(CombinationGenerationTest, GetNextTest) {
-  unsigned int val = bidding::GetFirstCanonicalCombination(2);
+  unsigned int val = GetFirstCanonicalCombination(2);
   EXPECT_EQ(3, val);
-  val = bidding::GetNextCanonicalCombination(val);
+  val = GetNextCanonicalCombination(val);
   EXPECT_EQ(5, val);
-  val = bidding::GetNextCanonicalCombination(val);
+  val = GetNextCanonicalCombination(val);
   EXPECT_EQ(6, val);
 }
 }  // namespace gatests

@@ -1,13 +1,13 @@
-#ifndef _BIDDING_BID_FUNCTION_OPS_H_
-#define _BIDDING_BID_FUNCTION_OPS_H_
+#ifndef _NUMERICALDISTS_BID_FUNCTION_OPS_H_
+#define _NUMERICALDISTS_BID_FUNCTION_OPS_H_
 
-#include "bidding/bounds.h"
-#include "bidding/distribution.h"
-#include "bidding/equal_length_piecewise_function.h"
-#include "bidding/interval.h"
-#include "bidding/piecewise_linear_function.h"
+#include "numericaldists/bounds.h"
+#include "numericaldists/distribution.h"
+#include "numericaldists/equal_length_piecewise_function.h"
+#include "numericaldists/interval.h"
+#include "numericaldists/piecewise_linear_function.h"
 
-namespace bidding {
+namespace numericaldists {
 
 EqualLengthPiecewiseFunction ResampleFunction(
     const std::function<float(float)>& func, Interval interval,
@@ -46,6 +46,6 @@ EqualLengthPiecewiseFunction ApproximateExpectedValueFunction(
     const std::function<float(float)>& cdf, Interval interval,
     int n_samples = 1001);
 
-}  // namespace bidding
+}  // namespace numericaldists
 
-#endif  // _BIDDING_BID_FUNCTION_OPS_H_
+#endif  // _NUMERICALDISTS_BID_FUNCTION_OPS_H_

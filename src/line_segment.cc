@@ -1,14 +1,14 @@
-#include "bidding/line_segment.h"
+#include "numericaldists/line_segment.h"
 
 #include <cstddef>
 #include <ostream>
 
 #include <boost/container_hash/hash.hpp>
 
-#include "bidding/bounds.h"
-#include "bidding/interval.h"
+#include "numericaldists/bounds.h"
+#include "numericaldists/interval.h"
 
-namespace bidding {
+namespace numericaldists {
 
 LineSegment::LineSegment(Interval xint, Bounds ybounds)
     : xint_(xint),
@@ -50,4 +50,4 @@ std::ostream& operator<<(std::ostream& os, const LineSegment& ls) {
   return os;
 }
 
-}  // namespace bidding
+}  // namespace numericaldists

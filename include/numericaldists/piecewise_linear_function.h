@@ -1,13 +1,13 @@
-#ifndef _BIDDING_PIECEWISE_LINEAR_FUNCTION_
-#define _BIDDING_PIECEWISE_LINEAR_FUNCTION_
+#ifndef _NUMERICALDISTS_PIECEWISE_LINEAR_FUNCTION_
+#define _NUMERICALDISTS_PIECEWISE_LINEAR_FUNCTION_
 
 #include <ostream>
 #include <vector>
 
-#include "bidding/interval.h"
-#include "bidding/line_segment.h"
+#include "numericaldists/interval.h"
+#include "numericaldists/line_segment.h"
 
-namespace bidding {
+namespace numericaldists {
 
 class PiecewiseLinearFunction {
  public:
@@ -32,6 +32,6 @@ bool operator==(const PiecewiseLinearFunction& g1,
                 const PiecewiseLinearFunction& g2);
 std::size_t hash_value(const PiecewiseLinearFunction& s);
 
-}  // namespace bidding
+}  // namespace numericaldists
 
-#endif  // _BIDDING_PIECEWISE_LINEAR_FUNCTION_
+#endif  // _NUMERICALDISTS_PIECEWISE_LINEAR_FUNCTION_

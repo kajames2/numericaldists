@@ -1,11 +1,11 @@
-#ifndef _BIDDING_INTERVAL_H_
-#define _BIDDING_INTERVAL_H_
+#ifndef _NUMERICALDISTS_INTERVAL_H_
+#define _NUMERICALDISTS_INTERVAL_H_
 
 #include <cassert>
 #include <cstddef>
 #include <ostream>
 
-namespace bidding {
+namespace numericaldists {
 
 struct Interval {
   Interval() {}
@@ -20,6 +20,6 @@ bool operator==(const Interval& g1, const Interval& g2);
 std::size_t hash_value(const Interval& s);
 std::ostream& operator<<(std::ostream& os, const Interval& r);
 
-}  // namespace bidding
+}  // namespace numericaldists
 
-#endif  // _BIDDING_INTERVAL_H_
+#endif  // _NUMERICALDISTS_INTERVAL_H_

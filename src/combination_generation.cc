@@ -1,10 +1,10 @@
-#include "bidding/combination_generation.h"
+#include "numericaldists/combination_generation.h"
 
 #include <algorithm>
 #include <functional>
 #include <vector>
 
-namespace bidding {
+namespace numericaldists {
 
 unsigned int GetFirstCanonicalCombination(int r) {
   if (r == 0) return 0;
@@ -20,4 +20,4 @@ unsigned int GetNextCanonicalCombination(unsigned int v) {
   return (t + 1) | (((~t & -~t) - 1) >> (__builtin_ctz(v) + 1));
 }
 
-}  // namespace bidding
+}  // namespace numericaldists

@@ -1,12 +1,12 @@
-#include "bidding/line_ops.h"
+#include "numericaldists/line_ops.h"
 
 #include <vector>
 
-#include "bidding/bounds.h"
-#include "bidding/interval.h"
-#include "bidding/line_segment.h"
+#include "numericaldists/bounds.h"
+#include "numericaldists/interval.h"
+#include "numericaldists/line_segment.h"
 
-namespace bidding {
+namespace numericaldists {
 std::vector<float> GetMesh(Interval interval, int n_points) {
   assert(n_points > 1);
   std::vector<float> vec(n_points);
@@ -30,4 +30,4 @@ std::vector<LineSegment> PointsToLines(const std::vector<float>& xs,
   return segments;
 }
 
-}  // namespace bidding
+}  // namespace numericaldists

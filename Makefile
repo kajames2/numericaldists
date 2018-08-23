@@ -2,7 +2,7 @@ CC := clang++-6.0
 SRCDIR := src
 BUILDDIR := build
 TESTDIR := test
-TARGET := bidding
+TARGET := numericaldists
 
 SRCEXT := cc
 SOURCES := $(shell find $(SRCDIR) -type f -name "*.$(SRCEXT)")

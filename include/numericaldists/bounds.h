@@ -1,12 +1,12 @@
-#ifndef _BIDDING_BOUNDS_H_
-#define _BIDDING_BOUNDS_H_
+#ifndef _NUMERICALDISTS_BOUNDS_H_
+#define _NUMERICALDISTS_BOUNDS_H_
 
 #include <cstddef>
 #include <ostream>
 
-#include "bidding/interval.h"
+#include "numericaldists/interval.h"
 
-namespace bidding {
+namespace numericaldists {
 
 struct Bounds {
   Bounds() {}
@@ -20,6 +20,6 @@ bool operator==(const Bounds& g1, const Bounds& g2);
 std::size_t hash_value(const Bounds& s);
 std::ostream& operator<<(std::ostream& os, const Bounds& r);
 
-}  // namespace bidding
+}  // namespace numericaldists
 
-#endif  // _BIDDING_BOUNDS_H_
+#endif  // _NUMERICALDISTS_BOUNDS_H_

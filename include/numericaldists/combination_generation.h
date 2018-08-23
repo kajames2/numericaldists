@@ -1,13 +1,13 @@
-#ifndef _BIDDING_COMBINATION_GENERATION_H_
-#define _BIDDING_COMBINATION_GENERATION_H_
+#ifndef _NUMERICALDISTS_COMBINATION_GENERATION_H_
+#define _NUMERICALDISTS_COMBINATION_GENERATION_H_
 
 #include <vector>
 
-namespace bidding {
+namespace numericaldists {
 
 unsigned int GetFirstCanonicalCombination(int r);
 unsigned int GetNextCanonicalCombination(unsigned int v);
 
-}  // namespace bidding
+}  // namespace numericaldists
 
-#endif  // _BIDDING_COMBINATION_GENERATION_H_
+#endif  // _NUMERICALDISTS_COMBINATION_GENERATION_H_

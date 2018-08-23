@@ -2,9 +2,11 @@
 
 #include <vector>
 
-#include "bidding/interval.h"
+#include "numericaldists/interval.h"
 
 namespace gatests {
+
+using namespace numericaldists;
 
 class IntervalTest : public ::testing::Test {
  public:
@@ -15,12 +17,12 @@ class IntervalTest : public ::testing::Test {
 };
 
 TEST_F(IntervalTest, InIntervalTest) {
-  auto interval = bidding::Interval{5, 10};
-  EXPECT_FALSE(bidding::InInterval(interval, 0));
-  EXPECT_TRUE(bidding::InInterval(interval, 5));
-  EXPECT_TRUE(bidding::InInterval(interval, 8));
-  EXPECT_FALSE(bidding::InInterval(interval, 10));
-  EXPECT_FALSE(bidding::InInterval(interval, 15));
+  auto interval = Interval{5, 10};
+  EXPECT_FALSE(InInterval(interval, 0));
+  EXPECT_TRUE(InInterval(interval, 5));
+  EXPECT_TRUE(InInterval(interval, 8));
+  EXPECT_FALSE(InInterval(interval, 10));
+  EXPECT_FALSE(InInterval(interval, 15));
 }
 
 }  // namespace gatests

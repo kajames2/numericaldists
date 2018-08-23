@@ -1,14 +1,14 @@
-#ifndef _BIDDING_LINE_OPS_H_
-#define _BIDDING_LINE_OPS_H_
+#ifndef _NUMERICALDISTS_LINE_OPS_H_
+#define _NUMERICALDISTS_LINE_OPS_H_
 
-#include "bidding/bounds.h"
-#include "bidding/interval.h"
-#include "bidding/distribution.h"
-#include "bidding/line_segment.h"
+#include "numericaldists/bounds.h"
+#include "numericaldists/interval.h"
+#include "numericaldists/distribution.h"
+#include "numericaldists/line_segment.h"
 
-namespace bidding {
+namespace numericaldists {
 std::vector<float> GetMesh(Interval interval, int n_lines = 100);
 std::vector<LineSegment> PointsToLines(const std::vector<float>& xs, const std::vector<float>& ys);
-}  // namespace bidding
+}  // namespace numericaldists
 
-#endif  // _BIDDING_LINE_OPS_H_
+#endif  // _NUMERICALDISTS_LINE_OPS_H_

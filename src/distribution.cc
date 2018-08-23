@@ -1,9 +1,9 @@
-#include "bidding/distribution.h"
+#include "numericaldists/distribution.h"
 
 #include <algorithm>
 #include <vector>
 
-namespace bidding {
+namespace numericaldists {
 
 float lower(const Distribution& dist) { return quantile(dist, 0.000001); }
 float upper(const Distribution& dist) { return quantile(dist, 0.999999); }
@@ -24,4 +24,4 @@ float upper(const std::vector<Distribution>& dists) {
       }));
 }
 
-}  // namespace bidding
+}  // namespace numericaldists

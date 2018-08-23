@@ -1,4 +1,4 @@
-#include "bidding/piecewise_linear_function.h"
+#include "numericaldists/piecewise_linear_function.h"
 
 #include <algorithm>
 #include <boost/container_hash/hash.hpp>
@@ -6,11 +6,11 @@
 #include <cstddef>
 #include <iostream>
 
-#include "bidding/bounds.h"
-#include "bidding/interval.h"
-#include "bidding/line_segment.h"
+#include "numericaldists/bounds.h"
+#include "numericaldists/interval.h"
+#include "numericaldists/line_segment.h"
 
-namespace bidding {
+namespace numericaldists {
 
 PiecewiseLinearFunction::PiecewiseLinearFunction(const std::vector<float>& ys,
                                                  Interval interval)
@@ -81,4 +81,4 @@ std::ostream& operator<<(std::ostream& os, const PiecewiseLinearFunction& pl) {
   return os;
 }
 
-}  // namespace bidding
+}  // namespace numericaldists

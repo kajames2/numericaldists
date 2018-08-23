@@ -1,11 +1,11 @@
-#include "bidding/interval.h"
+#include "numericaldists/interval.h"
 
 #include <cstddef>
 #include <ostream>
 
 #include <boost/container_hash/hash.hpp>
 
-namespace bidding {
+namespace numericaldists {
 
 bool InInterval(Interval interval, float val) {
   return val >= interval.min && val < interval.max;
@@ -30,4 +30,4 @@ std::ostream& operator<<(std::ostream& os, const Interval& r) {
   return os;
 }
 
-}  // namespace bidding
+}  // namespace numericaldists

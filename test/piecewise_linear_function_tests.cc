@@ -2,9 +2,11 @@
 
 #include <vector>
 
-#include "bidding/piecewise_linear_function.h"
+#include "numericaldists/piecewise_linear_function.h"
 
 namespace gatests {
+
+using namespace numericaldists;
 
 class PiecewiseLinearFunctionTest : public ::testing::Test {
  public:
@@ -12,17 +14,14 @@ class PiecewiseLinearFunctionTest : public ::testing::Test {
 
  protected:
   virtual void SetUp() {}
-  bidding::PiecewiseLinearFunction func = bidding::PiecewiseLinearFunction(
-      std::vector<float>{10, 20, 20, 50}, bidding::Interval{0, 30});
-  bidding::PiecewiseLinearFunction horizontal_func =
-      bidding::PiecewiseLinearFunction(std::vector<float>{10, 10},
-                                       bidding::Interval{0, 30});
-  bidding::PiecewiseLinearFunction vertical_func =
-      bidding::PiecewiseLinearFunction(std::vector<float>{10, 20},
-                                       bidding::Interval{30, 30});
-  bidding::PiecewiseLinearFunction decreasing_func =
-      bidding::PiecewiseLinearFunction(std::vector<float>{30, 10},
-                                       bidding::Interval{0, 30});
+  PiecewiseLinearFunction func = PiecewiseLinearFunction(
+      std::vector<float>{10, 20, 20, 50}, Interval{0, 30});
+  PiecewiseLinearFunction horizontal_func =
+      PiecewiseLinearFunction(std::vector<float>{10, 10}, Interval{0, 30});
+  PiecewiseLinearFunction vertical_func =
+      PiecewiseLinearFunction(std::vector<float>{10, 20}, Interval{30, 30});
+  PiecewiseLinearFunction decreasing_func =
+      PiecewiseLinearFunction(std::vector<float>{30, 10}, Interval{0, 30});
 };
 
 typedef PiecewiseLinearFunctionTest PiecewiseLinearFunctionDeathTest;
@@ -54,8 +53,7 @@ TEST_F(PiecewiseLinearFunctionTest, GetBidDecreasing) {
 
 TEST_F(PiecewiseLinearFunctionDeathTest, SinglePointFunctionDeathTest) {
   ::testing::FLAGS_gtest_death_test_style = "threadsafe";
-  EXPECT_DEATH(bidding::PiecewiseLinearFunction(std::vector<float>{10},
-                                                bidding::Interval(0, 30)),
+  EXPECT_DEATH(PiecewiseLinearFunction(std::vector<float>{10}, Interval(0, 30)),
                "");
 }
 

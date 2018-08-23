@@ -1,13 +1,13 @@
-#ifndef _BIDDING_LINE_SEGMENT_H_
-#define _BIDDING_LINE_SEGMENT_H_
+#ifndef _NUMERICALDISTS_LINE_SEGMENT_H_
+#define _NUMERICALDISTS_LINE_SEGMENT_H_
 
 #include <cstddef>
 #include <iostream>
 
-#include "bidding/bounds.h"
-#include "bidding/interval.h"
+#include "numericaldists/bounds.h"
+#include "numericaldists/interval.h"
 
-namespace bidding {
+namespace numericaldists {
 
 class LineSegment {
  public:
@@ -35,6 +35,6 @@ bool operator==(const LineSegment& g1, const LineSegment& g2);
 std::size_t hash_value(const LineSegment& s);
 std::ostream& operator<<(std::ostream& os, const LineSegment& ls);
 
-}  // namespace bidding
+}  // namespace numericaldists
 
-#endif  // _BIDDING_LINE_SEGMENT_H_
+#endif  // _NUMERICALDISTS_LINE_SEGMENT_H_

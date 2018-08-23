@@ -1,10 +1,10 @@
-#ifndef _BIDDING_DISTRIBUTION_H_
-#define _BIDDING_DISTRIBUTION_H_
+#ifndef _NUMERICALDISTS_DISTRIBUTION_H_
+#define _NUMERICALDISTS_DISTRIBUTION_H_
 
 #include <boost/math/distributions.hpp>
 #include <memory>
 
-namespace bidding {
+namespace numericaldists {
 
 // Code adapted from Sean Parent's talk on runtime polymorphism.
 // Is an example of type erasure intended to wrap boost's distributions so that
@@ -52,6 +52,6 @@ float upper(const Distribution& dist);
 float lower(const std::vector<Distribution>& dists);
 float upper(const std::vector<Distribution>& dists);
 
-}  // namespace bidding
+}  // namespace numericaldists
 
-#endif  // _BIDDING_DISTRIBUTION_H_
+#endif  // _NUMERICALDISTS_DISTRIBUTION_H_

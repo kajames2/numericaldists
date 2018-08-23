@@ -1,17 +1,17 @@
-#include "bidding/bid_function_ops.h"
+#include "numericaldists/bid_function_ops.h"
 
 #include <boost/math/quadrature/gauss.hpp>
-#include "bidding/combination_generation.h"
-#include "bidding/distribution.h"
-#include "bidding/equal_length_piecewise_function.h"
-#include "bidding/line_ops.h"
-#include "bidding/piecewise_linear_function.h"
+#include "numericaldists/combination_generation.h"
+#include "numericaldists/distribution.h"
+#include "numericaldists/equal_length_piecewise_function.h"
+#include "numericaldists/line_ops.h"
+#include "numericaldists/piecewise_linear_function.h"
 
 #include <algorithm>
 #include <functional>
 #include <vector>
 
-namespace bidding {
+namespace numericaldists {
 
 EqualLengthPiecewiseFunction ResampleFunction(
     const std::function<float(float)>& func, Interval interval, int n_samples) {
@@ -87,7 +87,7 @@ std::vector<float> ApproximateKthLowestOrderStatisticCDFHelper(
   auto x_samples = GetMesh(interval, n_samples);
   std::vector<float> cdf_samples(n_samples, 0);
 
-  auto comb = bidding::GetFirstCanonicalCombination(k);
+  auto comb = GetFirstCanonicalCombination(k);
   while (comb < (1<<n)) {
     for (int i = 0; i < n_samples; ++i) {
       float prob = 1;
@@ -98,7 +98,7 @@ std::vector<float> ApproximateKthLowestOrderStatisticCDFHelper(
       }
       cdf_samples[i] += prob;
     }
-    comb = bidding::GetNextCanonicalCombination(comb);
+    comb = GetNextCanonicalCombination(comb);
   }
   if (k < n) {
     auto rest_cdf = ApproximateKthLowestOrderStatisticCDFHelper(cdfs, interval, k+1, n_samples);
@@ -163,4 +163,4 @@ EqualLengthPiecewiseFunction ApproximateExpectedValueFunction(
   return EqualLengthPiecewiseFunction(segments);
 }
 
-}  // namespace bidding
+}  // namespace numericaldists
